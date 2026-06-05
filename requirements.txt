@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+yfinance
+datetime
+plotly
+matplotlib
+scikit-learn
+tensorflow
+keras
+pyngrok
+scipy
