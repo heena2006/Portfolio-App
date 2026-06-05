@@ -6,7 +6,7 @@ datetime
 plotly
 matplotlib
 scikit-learn
-tensorflow
+tensorflow==2.16.1
 keras
 pyngrok
 scipy
