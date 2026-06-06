@@ -13,7 +13,6 @@ from datetime import timedelta,date
 # Set random seed for reproducibility
 np.random.seed(42)
 tf.random.set_seed(42)
-@st.cache_data
 
 if "top_sectors" in st.session_state:
 
@@ -108,7 +107,7 @@ if run_button:
 
         # Train the model with early stopping
         early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=30, verbose=0, mode='auto', restore_best_weights=True)
-        model.fit(x, y, batch_size=32, epochs=20, verbose=0, callbacks=[early_stopping])
+        model.fit(x, y, batch_size=32, epochs=10, verbose=0, callbacks=[early_stopping])
 
 
         #model.fit(x, y, epochs=20, batch_size=32, verbose=0)
