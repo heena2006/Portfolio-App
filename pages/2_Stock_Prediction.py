@@ -101,7 +101,7 @@ else:
             model.fit(x, y, batch_size=32, epochs=20, verbose=0, callbacks=[early_stopping])
 
 
-        #model.fit(x, y, epochs=20, batch_size=32, verbose=0)
+        #model.fit(x, y, epochs=10, batch_size=32, verbose=0)
 
         # Predictions
             predictions = model.predict(x)
@@ -134,11 +134,7 @@ else:
             predictions[-1][0],
             y_actual[-1][0],
             future_predictions[-1][0],
-            future_returns,
-            mape,
-            rmse,
-            r2,
-            accuracy
+            future_returns
             ])
     #st.session_state["selected_stocks"] = all_stocks
        # Plot
