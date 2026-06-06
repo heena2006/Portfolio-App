@@ -13,6 +13,7 @@ from datetime import timedelta,date
 # Set random seed for reproducibility
 np.random.seed(42)
 tf.random.set_seed(42)
+@st.cache_data
 
 if "top_sectors" in st.session_state:
 
