@@ -230,7 +230,7 @@ if st.button("🚀 Optimize Portfolio"):
 
         model = create_lstm_model((lookback, num_stocks), num_stocks)
         early_stopping = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=30,verbose=0, mode='auto', restore_best_weights=True)
-        model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=0,callbacks=[early_stopping])
+        model.fit(X_train, y_train, epochs=10, batch_size=32, verbose=0,callbacks=[early_stopping])
 
         last_input = scaled_train[-lookback:].copy()
         predictions_scaled = []
