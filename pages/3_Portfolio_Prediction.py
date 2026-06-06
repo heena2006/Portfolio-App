@@ -10,7 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 np.random.seed(42)
 tf.random.set_seed(42)
-
+@st.cache_data
 st.set_page_config(
     page_title="Portfolio Optimization",
     layout="wide"
