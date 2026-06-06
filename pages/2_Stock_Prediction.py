@@ -13,7 +13,7 @@ from utils.sector_mapping import sector_stocks
 # Set random seed for reproducibility
 np.random.seed(42)
 tf.random.set_seed(42)
-
+@st.cache_resource
 st.title("📊 Stock Prediction")
 
 if "top_sectors" not in st.session_state:
