@@ -10,7 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 np.random.seed(42)
 tf.random.set_seed(42)
-@st.cache_data
+
 st.set_page_config(
     page_title="Portfolio Optimization",
     layout="wide"
@@ -167,7 +167,7 @@ if st.button("🚀 Optimize Portfolio"):
         best_performance = -np.inf
         epsilon = 1e-8
 
-        num_iterations, num_ants =100, 60
+        num_iterations, num_ants =50, 60
         evaporation_rate, alpha, beta = 0.2, 2, 3
         rf_rate = 0.0685
 
