@@ -98,7 +98,7 @@ else:
 
         # Train the model with early stopping
             early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=30, verbose=0, mode='auto', restore_best_weights=True)
-            model.fit(x, y, batch_size=32, epochs=20, verbose=0, callbacks=[early_stopping])
+            model.fit(x, y, batch_size=32, epochs=10, verbose=0, callbacks=[early_stopping])
 
 
         #model.fit(x, y, epochs=10, batch_size=32, verbose=0)
@@ -126,14 +126,14 @@ else:
                 last_data = np.append(last_data[1:], pred, axis=0)
 
             future_predictions = scaler.inverse_transform(np.array(future_predictions_list).reshape(-1, 1))
-            future_returns = (future_predictions[-1][0]-y_actual[-1][0])/y_actual[-1][0] *100
+            future_returns = (future_predictions[-1][-1]-y_actual[-1][-1])/y_actual[-1][-1] *100
 
             stock_summary.append([
             sector,
             stock,
-            predictions[-1][0],
-            y_actual[-1][0],
-            future_predictions[-1][0],
+            predictions[-1][-1],
+            y_actual[-1][-1],
+            future_predictions[-1][-1],
             future_returns
             ])
     #st.session_state["selected_stocks"] = all_stocks
