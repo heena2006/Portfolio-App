@@ -152,11 +152,7 @@ df = pd.DataFrame(stock_summary, columns=[
         "Predicted Value",
         "Actual Value",
         "Future Prediction",
-        "Future Return",
-        "MAPE",
-        "RMSE",
-        "R2",
-        "Accuracy"
+        "Future Return"
          ])
     # Sort by Future Return (Descending)
 df = df.sort_values(by="Future Return", ascending=False)
