@@ -135,7 +135,7 @@ if run_button:
             last_data = np.append(last_data[1:], pred, axis=0)
 
         future_predictions = scaler.inverse_transform(np.array(future_predictions_list).reshape(-1, 1))
-        future_returns = (future_predictions-y_actual)/y_actual *100 #(future_predictions[-1][-1]-y_actual[-1][-1])/y_actual[-1][-1] *100
+        future_returns =(future_predictions[-1][-1]-y_actual[-1][-1])/y_actual[-1][-1] *100
 
         summary_data.append([
             stock,
