@@ -142,7 +142,7 @@ if run_button:
             predictions[-1][-1],
             y_actual[-1][-1],
             future_predictions[-1][-1],
-            future_returns[-1][-1]
+            future_returns
         ])
 
        # Plot
